@@ -1,23 +1,23 @@
 import { devolverFecha, devolverHora } from "./src/time.js";
 
-import express from "express";  // Hacer npm i express
+import express from "express";  
 
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {  // EndPoint "/", verbo GET
+app.get('/', (req, res) => {  
   res.send('holi');
 })
 
-app.listen(port, () => {  // Inicio el servidor WEB (escuchar)
+app.listen(port, () => {  // Inicio el servidor WEB 
   console.log(`Listening on http://localhost:${port}`)
 })
 
-app.get('/hora', (req, res) => {  // EndPoint "/", verbo GET
+app.get('/hora', (req, res) => {  
   res.send(devolverHora());
 })
 
-app.get('/fecha', (req, res) => {  // EndPoint "/", verbo GET
+app.get('/fecha', (req, res) => { 
   res.send(devolverFecha());
 })
 
